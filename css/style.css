@@ -91,6 +91,60 @@ a:active {
   display: none;
 }
 
+.hot-topic {
+  display: block;
+  height: 300px;
+  margin-bottom: 30px;
+  transition: opacity .15s;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .15);
+}
+
+.hot-topic:hover {
+  opacity: .85;
+}
+
+.hot-topic .image {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.hot-topic .content {
+  line-height: 1.6;
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 105px 25px 0;
+  background-color: #2d3d54;
+}
+
+.hot-topic .title {
+  font-size: 2.0rem;
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.hot-topic .desc {
+  color: #ddddcc;
+}
+
+.hot-topic .date {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 140px;
+  padding: 4px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #2d3d54;
+  background-color: #ffffff;
+}
+
 .sidemenu {
   float: right;
   width: 275px;
