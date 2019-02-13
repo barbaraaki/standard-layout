@@ -184,6 +184,7 @@ NEWS
 }
 
 .scroll-list .scroll-item a {
+  font-size: 0;
   display: block;
   padding: 10px 15px;
   transition: background-color .1s;
@@ -196,6 +197,40 @@ NEWS
 
 .scroll-list .scroll-item a:hover {
   background-color: #fafaf8;
+}
+
+.scroll-list .date {
+  font-size: 1.0rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 19%;
+  letter-spacing: 1px;
+}
+
+.scroll-list .category {
+  font-size: 1.0rem;
+  line-height: 16px;
+  display: inline-block;
+  width: 8%;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #d03c56;
+}
+
+.scroll-list .category.news {
+  background-color: #2c3c53;
+}
+
+.scroll-list .title {
+  font-size: 1.2rem;
+  display: inline-block;
+  overflow: hidden;
+  width: 73%;
+  padding-left: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /*********************************************
