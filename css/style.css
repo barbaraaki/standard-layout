@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /*********************************************
- 共通
- *********************************************/
+共通
+*********************************************/
 html {
   font-size: 62.5%;
 }
@@ -38,7 +38,7 @@ a:active {
 }
 
 .heading {
-  font-style: 1.6rem;
+  font-size: 1.6rem;
   padding: 10px 12px;
   letter-spacing: 1px;
   background: url("../images/bg-slash.gif");
@@ -234,11 +234,228 @@ NEWS
 }
 
 /*********************************************
- サイドメニュー
- *********************************************/
+ARTICLES
+*********************************************/
+.article-box {
+  position: relative;
+  display: block;
+  width: 315px;
+  height: 360px;
+  margin-bottom: 30px;
+  padding: 210px 15px 0;
+  transition: opacity .15s;
+  box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, .15);
+}
+
+.article-box:hover {
+  opacity: .8;
+}
+
+.article-box:nth-of-type(odd) {
+  float: left;
+}
+
+.article-box:nth-of-type(even) {
+  float: right;
+}
+
+.article-box .title {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-top: 30px;
+  color: #555555;
+}
+
+.article-box .desc {
+  overflow: hidden;
+  margin-top: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333333;
+}
+
+.article-box .date {
+  font-size: 1.1rem;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  display: block;
+  width: 160px;
+  padding: 4px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: #2d3d54;
+  background-color: #b5d264;
+}
+
+.article-box .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/*********************************************
+サイドメニュー
+*********************************************/
 .sidemenu {
   float: right;
   width: 275px;
+}
+
+/*********************************************
+ランキング
+*********************************************/
+.ranking {
+  margin-bottom: 30px;
+  list-style-type: none;
+  counter-reset: ranking;
+}
+
+.ranking .ranking-item {
+  margin-top: 15px;
+}
+
+.ranking .ranking-item a {
+  font-size: 0;
+  display: block;
+  transition: opacity .15s;
+}
+
+.ranking .ranking-item a:hover {
+  opacity: .8;
+}
+
+.ranking .image {
+  width: 55px;
+  height: 55px;
+}
+
+.ranking .text {
+  line-height: 1.5;
+  display: inline-block;
+  width: 182px;
+  vertical-align: top;
+  color: #000000;
+}
+
+.ranking .order {
+  font-weight: bold;
+  line-height: 16px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 10px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  text-align: center;
+  vertical-align: 20px;
+  color: #aaaaaa;
+  border: 1px solid #cccccc;
+}
+
+.ranking .order::before {
+  font-size: 1.0rem;
+  display: inline-block;
+  content: counter(ranking);
+  counter-increment: ranking;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.ranking .ranking-item:nth-of-type(1) .order ,
+.ranking .ranking-item:nth-of-type(2) .order ,
+.ranking .ranking-item:nth-of-type(3) .order {
+  font-weight: normal;
+  line-height: 18px;
+  color: #ffffff;
+  border: none;
+}
+
+.ranking .ranking-item:nth-of-type(1) .order {
+  background-color: #dab413;
+}
+
+.ranking .ranking-item:nth-of-type(2) .order {
+  background-color: #6e7b84;
+}
+
+.ranking .ranking-item:nth-of-type(3) .order {
+  background-color: #a0541a;
+}
+
+/*********************************************
+ドキュメントリスト
+*********************************************/
+.documents {
+  margin: 10px 10px 30px;
+}
+
+.documents ,
+.documents ul {
+  list-style-type: none;
+}
+
+.documents > li .title {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin: 15px 0;
+  padding-left: 8px;
+  border-left: 5px solid #d03c56;
+}
+
+.documents > li + li {
+  margin-top: 25px;
+}
+
+.documents > li ul {
+  margin: 15px;
+}
+
+.documents > li ul > li {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  background: url("../images/arrow.gif") no-repeat left center;
+}
+
+.documents a:hover {
+  text-decoration: underline;
+}
+
+/*********************************************
+検索フォーム
+*********************************************/
+.search-box {
+  font-size: 0;
+  padding: 15px;
+  background-color: #cccccc;
+}
+
+.search-box > * {
+  font-size: 1.2rem;
+}
+
+.search-box .search-input {
+  width: 205px;
+  height: 26px;
+  padding: 0 10px;
+  border: none;
+}
+
+.search-box .search-button {
+  width: 40px;
+  height: 26px;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
+  background-color: #d03c56;
+}
+
+.search-box .text {
+  margin-top: 12px;
 }
 
 /*********************************************
@@ -246,8 +463,38 @@ NEWS
 *********************************************/
 .footer {
   width: 100%;
+  padding: 20px 0 30px;
+  color: #ffffff;
+  background: #2d3d54 url("../images/bg-footer.gif");
 }
 
+.horizontal-list {
+  font-size: 0;
+  width: 970px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.horizontal-list .horizontal-item {
+  display: inline-block;
+  padding: 0 15px;
+  letter-spacing: 1px;
+}
+
+.horizontal-list .horizontal-item + .horizontal-item {
+  border-left: 1px solid #bbbbbb;
+}
+
+.horizontal-list .horizontal-item a {
+  font-size: 1.1rem;
+  transition: color .15s;
+  color: #bbbbbb;
+  border-bottom: 1px dashed #777777;
+}
+
+.horizontal-list .horizontal-item a:hover {
+  color: #dddddd;
+}
 
 /*********************************
 一時的
