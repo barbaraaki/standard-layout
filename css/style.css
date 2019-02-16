@@ -496,6 +496,12 @@ ARTICLES
   color: #dddddd;
 }
 
+.copyright {
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
 /*********************************
 一時的
 *********************************/
