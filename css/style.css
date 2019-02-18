@@ -314,6 +314,7 @@ ARTICLES
 }
 
 .ranking .ranking-item {
+  position: relative;
   margin-top: 15px;
 }
 
@@ -333,38 +334,35 @@ ARTICLES
 }
 
 .ranking .text {
+  font-size: 1.2rem;
   line-height: 1.5;
   display: inline-block;
-  width: 182px;
+  width: 205px;
+  margin-left: 15px;
   vertical-align: top;
   color: #000000;
 }
 
-/* 修正 */
 .ranking .order {
   font-weight: bold;
   line-height: 16px;
-  display: inline-block;
+  position: absolute;
+  top: -9px;
+  left: 46px;
   width: 18px;
   height: 18px;
-  margin: 0 10px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
   text-align: center;
   vertical-align: 20px;
   color: #aaaaaa;
   border: 1px solid #cccccc;
+  border-radius: 9px;
+  background-color: #ffffff;
 }
 
 .ranking .order::before {
   font-size: 1.0rem;
-  display: inline-block;
   content: counter(ranking);
   counter-increment: ranking;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 .ranking .ranking-item:nth-of-type(1) .order ,
